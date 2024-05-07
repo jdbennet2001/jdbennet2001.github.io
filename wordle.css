@@ -1,0 +1,152 @@
+body,
+html {
+  background-color: #333;
+  margin: 0px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title{
+    color: ghostwhite;
+    /* font-size: 33px; */
+    margin: 10px;
+}
+
+/*Default */
+html { font-size: 200%; }
+
+/* iPhone */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    html { font-size: 200%; }
+}
+
+/* iPad Air 3+ */
+@media all 
+and (device-width: 820px) 
+and (min-device-height: 1024px) 
+and (-webkit-min-device-pixel-ratio: 2)
+ {
+    html { font-size: 300%; }
+}
+
+
+
+
+
+.status{
+    background-color: ghostwhite;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 5px;
+    max-height: 1.25em;
+    height: 1.25em;
+    margin: 0.25em 0;
+}
+
+.status.hidden{
+    visibility: hidden;
+}
+
+
+
+.board{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+}
+
+.row{
+    border: 1px white;
+    /* background-color: seashell; */
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+        
+}
+
+.tile{
+    border: 1px solid gainsboro;
+    height: 1.5em;
+    width: 1.5em;
+    flex: 0 0 auto;
+    align-self: auto;
+    margin: 5px;
+
+    /* font-size: 30px; */
+    color: white;
+    text-align: center;
+}
+
+.green{
+    background-color: seagreen;
+}
+
+.yellow{
+    background-color: #c9b458;
+}
+
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+}
+
+.keyboard-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
+
+
+
+.keyboard-letter{
+    flex: 0 1 auto;
+    align-self: auto;
+    flex: 0 1 auto;
+    align-self: auto;
+    /* font-size: 30px; */
+    background-color: lightgray;
+    margin: 5px;
+    border-radius: 5px;
+    min-width: 0.75em;
+    text-align: center;
+    line-height: 1.25em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.keyboard-letter.used{
+    background-color: grey;
+}
+
+.keyboard-letter.yellow{
+    background-color: #c9b458;
+}
+
+.keyboard-letter.green{
+    background-color: seagreen;
+}
